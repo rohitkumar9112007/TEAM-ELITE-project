@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Clinic Appointment System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Local Clinic Appointment System</h1>
+        <p>Find doctors and book your consultation token</p>
+    </header>
+
+    <nav>
+        <a href="#doctors">Doctors</a>
+        <a href="#booking">Book Appointment</a>
+        <a href="#appointments">My Appointments</a>
+    </nav>
+
+    <main>
+
+        <section id="home">
+            <h2>Welcome to Our Clinic</h2>
+            <p>
+                Find a doctor, check available consultation slots
+                and book an appointment easily.
+            </p>
+        </section>
+
+        <section id="doctors">
+            <h2>Our Doctors</h2>
+
+            <label for="specialty">Filter by Specialty:</label>
+
+            <select id="specialty">
+                <option value="All">All Specialties</option>
+                <option value="General Physician">General Physician</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <option value="Dentist">Dentist</option>
+            </select>
+
+            <div id="doctor-list" class="doctor-grid">
+                <!-- Doctor cards are added using JavaScript -->
+            </div>
+        </section>
+
+        <section id="booking">
+            <h2>Book an Appointment</h2>
+
+            <form id="appointment-form">
+
+                <label for="doctor">Select Doctor:</label>
+                <select id="doctor" required>
+                    <option value="">Choose a doctor</option>
+                </select>
+
+                <label for="appointment-date">Select Date:</label>
+                <input type="date" id="appointment-date" required>
+
+                <h3>Available Consultation Slots</h3>
+                <p>Select one available time slot.</p>
+
+                <div id="slot-list" class="slot-grid">
+                    <p>Please select a doctor and date first.</p>
+                </div>
+
+                <input type="hidden" id="selected-slot">
+
+                <label for="patient-name">Patient Name:</label>
+                <input type="text" id="patient-name"
+                       placeholder="Enter patient name" required>
+
+                <label for="age">Patient Age:</label>
+                <input type="number" id="age"
+                       min="1" max="120"
+                       placeholder="Enter age" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone"
+                       placeholder="Enter 10-digit phone number"
+                       pattern="[0-9]{10}" required>
+
+                <label for="symptoms">Brief Symptoms:</label>
+                <textarea id="symptoms" rows="4"
+                    placeholder="Describe the reason for consultation"
+                    required></textarea>
+
+                <button type="submit">Book Appointment</button>
+
+                <p id="message"></p>
+
+            </form>
+        </section>
+
+        <section id="appointments">
+            <h2>My Appointments</h2>
+            <p>Your appointments booked in this browser will appear here.</p>
+
+            <div id="appointment-list">
+                <p>No appointments booked yet.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Local Clinic Doctor Appointment System</p>
+        <p>Frontend Project | LPU</p>
+    </footer>
+
+</body>
+</html>
