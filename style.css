@@ -1,0 +1,253 @@
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #176b87;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #064663;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 14px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b8e3f0;
+}
+
+/* Main content */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+section {
+    background-color: white;
+    padding: 22px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #176b87;
+    margin-top: 0;
+}
+
+h3 {
+    color: #24566b;
+}
+
+/* Doctor cards */
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.doctor-card {
+    border: 1px solid #d6e1e8;
+    border-radius: 9px;
+    padding: 18px;
+    background-color: #fbfdff;
+}
+
+.doctor-card h3 {
+    margin-top: 0;
+}
+
+.doctor-card p {
+    margin: 7px 0;
+}
+
+.doctor-card button {
+    margin-top: 10px;
+}
+
+/* Form fields */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bdcbd4;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #62a8c2;
+    border-color: #176b87;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Buttons */
+button {
+    background-color: #176b87;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 16px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #064663;
+}
+
+.book-button {
+    width: 100%;
+}
+
+/* Time slots */
+.slot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.slot {
+    background-color: #e4f4e9;
+    color: #176b3a;
+    border: 1px solid #9acbab;
+}
+
+.slot:hover {
+    background-color: #c8ebd4;
+}
+
+.slot.selected {
+    background-color: #176b87;
+    color: white;
+    border-color: #176b87;
+}
+
+.slot.booked {
+    background-color: #eeeeee;
+    color: #888888;
+    border: 1px solid #cccccc;
+    cursor: not-allowed;
+}
+
+/* Appointment cards */
+.appointment-card {
+    border: 1px solid #d6e1e8;
+    border-left: 5px solid #176b87;
+    border-radius: 7px;
+    padding: 15px;
+    margin: 12px 0;
+    background-color: #fbfdff;
+}
+
+.appointment-card p {
+    margin: 5px 0;
+}
+
+.cancel-button {
+    background-color: #b83b3b;
+    margin-top: 8px;
+}
+
+.cancel-button:hover {
+    background-color: #8d2424;
+}
+
+/* Messages */
+#message {
+    font-weight: bold;
+    color: #176b3a;
+}
+
+/* Footer */
+footer {
+    background-color: #064663;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 650px) {
+    main {
+        width: 94%;
+    }
+
+    .doctor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .slot-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    section {
+        padding: 16px;
+    }
+}
